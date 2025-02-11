@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mix & Match Bubble Tea</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="container">
+        <!-- Heading -->
+        <h1 id="make-your-own-boba">Make Your Own Boba!</h1>
+
+        <!-- Drink Preview -->
+        <div id="drink-preview">
+            <img id="drink-base" src="img/empty-cup.png" alt="Empty Cup">
+            <img id="topping-overlay" src="" style="display: none;">
+        </div>
+
+
+        <!-- Selection Panel -->
+        <div id="panel">
+            <div class="tabs">
+                <button class="tab-button active" data-tab="tea-options">Tea</button>
+                <button class="tab-button" data-tab="topping-options">Toppings</button>
+                <button class="tab-button" data-tab="milk-options">Milk</button>
+            </div>
+
+            <!-- Tea Options -->
+            <div class="tab-content active" id="tea-options">
+                <div class="options-grid">
+                    <div class="option" data-type="tea" data-value="jasmine">
+                        <img src="img/icons/green.png" alt="Jasmine Green">
+                        <span>Jasmine Green</span>
+                    </div>
+                    <div class="option" data-type="tea" data-value="thai">
+                        <img src="img/icons/thai.png" alt="Thai Iced">
+                        <span>Thai Iced</span>
+                    </div>
+                    <div class="option" data-type="tea" data-value="hongkong">
+                        <img src="img/icons/hongkong.png" alt="Hong Kong Red">
+                        <span>Hong Kong Red</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Toppings Options -->
+            <div class="tab-content" id="topping-options">
+                <div class="options-grid">
+                    <div class="option" data-type="topping" data-value="boba">
+                        <img src="img/icons/boba-icon.png" alt="Boba Pearls">
+                        <span>Boba Pearls</span>
+                    </div>
+                    <div class="option" data-type="topping" data-value="star-jelly">
+                        <img src="img/icons/jelly-icon.png" alt="Star Jelly">
+                        <span>Star Jelly</span>
+                    </div>
+                    <div class="option" data-type="topping" data-value="pudding">
+                        <img src="img/icons/pudding-icon.png" alt="Caramel Pudding">
+                        <span>Caramel Pudding</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Milk Options -->
+            <div class="tab-content" id="milk-options">
+                <div class="options-grid">
+                    <div class="option" data-type="milk" data-value="lactose-free">
+                        <img src="img/icons/lactose-milk.png" alt="Lactose-Free Milk">
+                        <span>Lactose-Free Milk</span>
+                    </div>
+                    <div class="option" data-type="milk" data-value="oat">
+                        <img src="img/icons/oat-milk.png" alt="Oat Milk">
+                        <span>Oat Milk</span>
+                    </div>
+                    <div class="option" data-type="milk" data-value="none">
+                        <img src="img/icons/no-milk.png" alt="No Milk">
+                        <span>No Milk</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup Message -->
+        <div id="popup-message" class="popup">
+            <p>Please select a tea before adding milk!</p>
+            <button id="close-popup">Close</button>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
