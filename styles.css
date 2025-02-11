@@ -129,9 +129,9 @@ body {
 /* Tabs are horizontal */
 .tabs {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   width: 80%;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   gap: 20px;
 }
 
@@ -169,7 +169,6 @@ body {
   flex-wrap: nowrap;
   justify-content: center;
   gap: 25px;
-  overflow-x: auto;
   padding: 5px;
   width: 100%;
 }
