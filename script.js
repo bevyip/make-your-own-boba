@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", () => {
       handleTabChange(button);
     });
-    button.addEventListener("touchstart", () => {
+    button.addEventListener("touchstart", (e) => {
+      e.preventDefault();
       handleTabChange(button);
     });
   });
@@ -46,7 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
     option.addEventListener("click", () => {
       handleOptionSelection(option);
     });
-    option.addEventListener("touchstart", () => {
+    option.addEventListener("touchstart", (e) => {
+      e.preventDefault();
       handleOptionSelection(option);
     });
   });
