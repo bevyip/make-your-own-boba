@@ -43,11 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let selectedMilk = "no-milk";
   let selectedTopping = "none";
 
-  // Update the selected drink name
   function updateDrinkName() {
     let drinkName = "";
 
-    // Add tea type and milk
     if (selectedTea === "jasmine") {
       drinkName = "Jasmine Green Tea";
     } else if (selectedTea === "thai") {
@@ -64,10 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
       drinkName += " (No Milk)";
     }
 
-    // Add topping
-    if (selectedTopping === "none") {
-      drinkName += " with No Toppings";
-    } else if (selectedTopping === "boba") {
+    if (selectedTopping === "boba") {
       drinkName += " with Boba Pearls";
     } else if (selectedTopping === "star-jelly") {
       drinkName += " with Star Jelly";
@@ -75,20 +70,18 @@ document.addEventListener("DOMContentLoaded", () => {
       drinkName += " with Caramel Pudding";
     }
 
-    // Update the display
     document.getElementById("drink-name").innerText = drinkName;
   }
 
-  // Update the name whenever the selection changes
   options.forEach((option) => {
     option.addEventListener("click", () => {
       handleOptionSelection(option);
-      updateDrinkName(); // Update name after selection
+      updateDrinkName();
     });
     option.addEventListener("touchstart", (e) => {
       e.preventDefault();
       handleOptionSelection(option);
-      updateDrinkName(); // Update name after selection
+      updateDrinkName();
     });
   });
 
