@@ -42,8 +42,8 @@ body {
 #drink-preview {
   width: 50%;
   max-width: 200px;
-  height: 40vh;
-  max-height: 45vh;
+  height: 30vh;
+  max-height: 40vh;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 25px;
   padding: 15px;

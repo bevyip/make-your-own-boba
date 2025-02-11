@@ -14,22 +14,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
   tabButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      const currentActiveButton = document.querySelector(".tab-button.active");
-      currentActiveButton.classList.remove("active");
-      currentActiveButton.style.backgroundColor = "";
-      currentActiveButton.style.borderColor = "";
-
-      document.querySelector(".tab-content.active").classList.remove("active");
-
-      button.classList.add("active");
-      button.style.backgroundColor = "#C9839B";
-      button.style.borderColor = "#566076";
-
-      document
-        .getElementById(button.getAttribute("data-tab"))
-        .classList.add("active");
+      handleTabChange(button);
+    });
+    button.addEventListener("touchstart", () => {
+      handleTabChange(button);
     });
   });
+
+  function handleTabChange(button) {
+    const currentActiveButton = document.querySelector(".tab-button.active");
+    currentActiveButton.classList.remove("active");
+    currentActiveButton.style.backgroundColor = "";
+    currentActiveButton.style.borderColor = "";
+
+    document.querySelector(".tab-content.active").classList.remove("active");
+
+    button.classList.add("active");
+    button.style.backgroundColor = "#C9839B";
+    button.style.borderColor = "#566076";
+
+    document
+      .getElementById(button.getAttribute("data-tab"))
+      .classList.add("active");
+  }
 
   let selectedTea = "";
   let selectedMilk = "no-milk";
@@ -37,34 +44,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
   options.forEach((option) => {
     option.addEventListener("click", () => {
-      const type = option.getAttribute("data-type");
-      const value = option.getAttribute("data-value");
-
-      options.forEach((opt) => {
-        if (opt.getAttribute("data-type") === type) {
-          opt.classList.remove("selected");
-        }
-      });
-
-      if (type === "tea") {
-        selectedTea = value;
-        option.classList.add("selected");
-        updateDrinkImage();
-      } else if (type === "milk") {
-        if (!selectedTea) {
-          popupMessage.style.display = "flex";
-          return;
-        }
-        option.classList.add("selected");
-        selectedMilk = value;
-        updateDrinkImage();
-      } else if (type === "topping") {
-        option.classList.add("selected");
-        selectedTopping = value;
-        updateToppingOverlay();
-      }
+      handleOptionSelection(option);
+    });
+    option.addEventListener("touchstart", () => {
+      handleOptionSelection(option);
     });
   });
+
+  function handleOptionSelection(option) {
+    const type = option.getAttribute("data-type");
+    const value = option.getAttribute("data-value");
+
+    options.forEach((opt) => {
+      if (opt.getAttribute("data-type") === type) {
+        opt.classList.remove("selected");
+      }
+    });
+
+    if (type === "tea") {
+      selectedTea = value;
+      option.classList.add("selected");
+      updateDrinkImage();
+    } else if (type === "milk") {
+      if (!selectedTea) {
+        popupMessage.style.display = "flex";
+        return;
+      }
+      option.classList.add("selected");
+      selectedMilk = value;
+      updateDrinkImage();
+    } else if (type === "topping") {
+      option.classList.add("selected");
+      selectedTopping = value;
+      updateToppingOverlay();
+    }
+  }
 
   closePopupButton.addEventListener("click", () => {
     popupMessage.style.display = "none";
