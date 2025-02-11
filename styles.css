@@ -237,6 +237,7 @@ body {
 }
 
 .popup button {
+  font-family: "Press Start 2P", sans-serif;
   padding: 10px;
   background-color: #ff80b3;
   border: none;
