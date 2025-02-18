@@ -11,10 +11,6 @@ This project allows you to create your own bubble tea experience by customizing 
 - **Milk Choices**: Customize your drink further with options for **Oat Milk**, **Lactaid Milk**, or **No Milk**.
 - **Fun Visuals**: As you make selections, see your drink come together in real-time, just like crafting your own boba masterpiece!
 
-### A fun, creative journey of flavor:
-
-This project blends flavor preferences with the visual delight of building your drink. Whether you're a bubble tea pro or a first-time customer, you can experiment with different combinations and see how your boba evolves.
-
 Enjoy crafting and personalizing your drink! 🧋
 
 ![Prototype](img/screen.gif)
