@@ -13,4 +13,6 @@ This project allows you to create your own bubble tea experience by customizing 
 
 Enjoy crafting and personalizing your drink! 🧋
 
+[Documentation](https://bevyip.notion.site/Week-3-19e5b3e7f9e78039a3e9dcb681de78cf?pvs=4)
+
 ![Prototype](img/screen.gif)
