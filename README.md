@@ -17,4 +17,4 @@ This project blends flavor preferences with the visual delight of building your 
 
 Enjoy crafting and personalizing your drink! 🧋
 
-![Prototype]('img/screen.gif')
+![Prototype](img/screen.gif)
